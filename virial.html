@@ -156,12 +156,12 @@
   <div class="section" id="virial-equation-of-state">
 <h1><span class="section-number">3. </span>Virial Equation of State<a class="headerlink" href="#virial-equation-of-state" title="Permalink to this headline">¶</a></h1>
 <dl class="py class">
-<dt id="thermodynamic_properties.eos.virial.SecondVirial">
-<em class="property">class </em><code class="sig-prename descclassname">thermodynamic_properties.eos.virial.</code><code class="sig-name descname">SecondVirial</code><span class="sig-paren">(</span><em class="sig-param">dippr_no: str = None</em>, <em class="sig-param">compound_name: str = None</em>, <em class="sig-param">cas_number: str = None</em>, <em class="sig-param">pow: callable = &lt;ufunc 'power'&gt;</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/thermodynamic_properties/eos/virial.html#SecondVirial"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#thermodynamic_properties.eos.virial.SecondVirial" title="Permalink to this definition">¶</a></dt>
+<dt id="scithermo.eos.virial.SecondVirial">
+<em class="property">class </em><code class="sig-prename descclassname">scithermo.eos.virial.</code><code class="sig-name descname">SecondVirial</code><span class="sig-paren">(</span><em class="sig-param">dippr_no: str = None</em>, <em class="sig-param">compound_name: str = None</em>, <em class="sig-param">cas_number: str = None</em>, <em class="sig-param">pow: callable = &lt;ufunc 'power'&gt;</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/scithermo/eos/virial.html#SecondVirial"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#scithermo.eos.virial.SecondVirial" title="Permalink to this definition">¶</a></dt>
 <dd><p>Virial equation of state for one component. See <a class="bibtex reference internal" href="zreferences.html#perry" id="id1">[GP07]</a><a class="bibtex reference internal" href="zreferences.html#smith2005" id="id2">[SVanNessA05]</a></p>
 <dl class="py method">
-<dt id="thermodynamic_properties.eos.virial.SecondVirial.G_R_RT_expr">
-<code class="sig-name descname">G_R_RT_expr</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">P</span></em>, <em class="sig-param"><span class="n">T</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/thermodynamic_properties/eos/virial.html#SecondVirial.G_R_RT_expr"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#thermodynamic_properties.eos.virial.SecondVirial.G_R_RT_expr" title="Permalink to this definition">¶</a></dt>
+<dt id="scithermo.eos.virial.SecondVirial.G_R_RT_expr">
+<code class="sig-name descname">G_R_RT_expr</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">P</span></em>, <em class="sig-param"><span class="n">T</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/scithermo/eos/virial.html#SecondVirial.G_R_RT_expr"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#scithermo.eos.virial.SecondVirial.G_R_RT_expr" title="Permalink to this definition">¶</a></dt>
 <dd><p>Dimensionless residual gibbs</p>
 <div class="math notranslate nohighlight">
 \[\frac{G^\mathrm{R}}{RT} = (B^0 + \omega B^1)\frac{P_\mathrm{r}}{T_\mathrm{r}}\]</div>
@@ -173,8 +173,8 @@
 </dd></dl>
 
 <dl class="py method">
-<dt id="thermodynamic_properties.eos.virial.SecondVirial.H_R_RT_expr">
-<code class="sig-name descname">H_R_RT_expr</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">P</span></em>, <em class="sig-param"><span class="n">T</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/thermodynamic_properties/eos/virial.html#SecondVirial.H_R_RT_expr"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#thermodynamic_properties.eos.virial.SecondVirial.H_R_RT_expr" title="Permalink to this definition">¶</a></dt>
+<dt id="scithermo.eos.virial.SecondVirial.H_R_RT_expr">
+<code class="sig-name descname">H_R_RT_expr</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">P</span></em>, <em class="sig-param"><span class="n">T</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/scithermo/eos/virial.html#SecondVirial.H_R_RT_expr"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#scithermo.eos.virial.SecondVirial.H_R_RT_expr" title="Permalink to this definition">¶</a></dt>
 <dd><p>Dimensionless residual enthalpy</p>
 <div class="math notranslate nohighlight">
 \[\frac{H^\mathrm{R}}{RT} = P_\mathrm{r}\left[
@@ -188,8 +188,8 @@
 </dd></dl>
 
 <dl class="py method">
-<dt id="thermodynamic_properties.eos.virial.SecondVirial.S_R_R_expr">
-<code class="sig-name descname">S_R_R_expr</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">P</span></em>, <em class="sig-param"><span class="n">T</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/thermodynamic_properties/eos/virial.html#SecondVirial.S_R_R_expr"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#thermodynamic_properties.eos.virial.SecondVirial.S_R_R_expr" title="Permalink to this definition">¶</a></dt>
+<dt id="scithermo.eos.virial.SecondVirial.S_R_R_expr">
+<code class="sig-name descname">S_R_R_expr</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">P</span></em>, <em class="sig-param"><span class="n">T</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/scithermo/eos/virial.html#SecondVirial.S_R_R_expr"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#scithermo.eos.virial.SecondVirial.S_R_R_expr" title="Permalink to this definition">¶</a></dt>
 <dd><p>Dimensionless residual entropy</p>
 <div class="math notranslate nohighlight">
 \[\frac{S^\mathrm{R}}{R} = -P_\mathrm{r}\left(
@@ -203,8 +203,8 @@
 </dd></dl>
 
 <dl class="py method">
-<dt id="thermodynamic_properties.eos.virial.SecondVirial.plot_Z_vs_P">
-<code class="sig-name descname">plot_Z_vs_P</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">T</span></em>, <em class="sig-param"><span class="n">P_min</span></em>, <em class="sig-param"><span class="n">P_max</span></em>, <em class="sig-param"><span class="n">symbol</span><span class="o">=</span><span class="default_value">'o'</span></em>, <em class="sig-param"><span class="n">ax</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/thermodynamic_properties/eos/virial.html#SecondVirial.plot_Z_vs_P"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#thermodynamic_properties.eos.virial.SecondVirial.plot_Z_vs_P" title="Permalink to this definition">¶</a></dt>
+<dt id="scithermo.eos.virial.SecondVirial.plot_Z_vs_P">
+<code class="sig-name descname">plot_Z_vs_P</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">T</span></em>, <em class="sig-param"><span class="n">P_min</span></em>, <em class="sig-param"><span class="n">P_max</span></em>, <em class="sig-param"><span class="n">symbol</span><span class="o">=</span><span class="default_value">'o'</span></em>, <em class="sig-param"><span class="n">ax</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/scithermo/eos/virial.html#SecondVirial.plot_Z_vs_P"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#scithermo.eos.virial.SecondVirial.plot_Z_vs_P" title="Permalink to this definition">¶</a></dt>
 <dd><p>Plot compressibility as a function of pressure</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -224,8 +224,8 @@
 </dd></dl>
 
 <dl class="py class">
-<dt id="thermodynamic_properties.eos.virial.BinarySecondVirial">
-<em class="property">class </em><code class="sig-prename descclassname">thermodynamic_properties.eos.virial.</code><code class="sig-name descname">BinarySecondVirial</code><span class="sig-paren">(</span><em class="sig-param">dippr_no_i: str = None</em>, <em class="sig-param">compound_name_i: str = None</em>, <em class="sig-param">cas_number_i: str = None</em>, <em class="sig-param">dippr_no_j: str = None</em>, <em class="sig-param">compound_name_j: str = None</em>, <em class="sig-param">cas_number_j: str = None</em>, <em class="sig-param">k_ij=0.0</em>, <em class="sig-param">pow: callable = &lt;ufunc 'power'&gt;</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/thermodynamic_properties/eos/virial.html#BinarySecondVirial"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#thermodynamic_properties.eos.virial.BinarySecondVirial" title="Permalink to this definition">¶</a></dt>
+<dt id="scithermo.eos.virial.BinarySecondVirial">
+<em class="property">class </em><code class="sig-prename descclassname">scithermo.eos.virial.</code><code class="sig-name descname">BinarySecondVirial</code><span class="sig-paren">(</span><em class="sig-param">dippr_no_i: str = None</em>, <em class="sig-param">compound_name_i: str = None</em>, <em class="sig-param">cas_number_i: str = None</em>, <em class="sig-param">dippr_no_j: str = None</em>, <em class="sig-param">compound_name_j: str = None</em>, <em class="sig-param">cas_number_j: str = None</em>, <em class="sig-param">k_ij=0.0</em>, <em class="sig-param">pow: callable = &lt;ufunc 'power'&gt;</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/scithermo/eos/virial.html#BinarySecondVirial"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#scithermo.eos.virial.BinarySecondVirial" title="Permalink to this definition">¶</a></dt>
 <dd><p>Second virial with combining rules from <a class="bibtex reference internal" href="zreferences.html#prausnitz1986" id="id3">[PLdeAzevedo86]</a></p>
 <div class="math notranslate nohighlight">
 \[\begin{split}\begin{align}
@@ -249,8 +249,8 @@
 </dd>
 </dl>
 <dl class="py method">
-<dt id="thermodynamic_properties.eos.virial.BinarySecondVirial.B_ij_expr">
-<code class="sig-name descname">B_ij_expr</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">cas_1</span></em>, <em class="sig-param"><span class="n">cas_2</span></em>, <em class="sig-param"><span class="n">T</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/thermodynamic_properties/eos/virial.html#BinarySecondVirial.B_ij_expr"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#thermodynamic_properties.eos.virial.BinarySecondVirial.B_ij_expr" title="Permalink to this definition">¶</a></dt>
+<dt id="scithermo.eos.virial.BinarySecondVirial.B_ij_expr">
+<code class="sig-name descname">B_ij_expr</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">cas_1</span></em>, <em class="sig-param"><span class="n">cas_2</span></em>, <em class="sig-param"><span class="n">T</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/scithermo/eos/virial.html#BinarySecondVirial.B_ij_expr"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#scithermo.eos.virial.BinarySecondVirial.B_ij_expr" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns <span class="math notranslate nohighlight">\(B_{ij}\)</span> considering that <code class="code docutils literal notranslate"><span class="pre">c1=c2</span></code> or <code class="code docutils literal notranslate"><span class="pre">c1!=c2</span></code></p>
 <p>If <code class="code docutils literal notranslate"><span class="pre">c1=c2</span></code>, find the component <span class="math notranslate nohighlight">\(k\)</span> for which <code class="code docutils literal notranslate"><span class="pre">k=c1=c2</span></code> (all cas no’s equal).
 Then return <span class="math notranslate nohighlight">\(B_{kk}\)</span> where</p>
@@ -263,7 +263,7 @@ B^0\left(\frac{T}{T_{\mathrm{c},k}}\right) + \omega_k\left(\frac{T}{T_{\mathrm{c
 \[B_{ij}=\frac{RT_{\mathrm{c},ij}}{P_{\mathrm{c},ij}}\left[
 B^0\left(\frac{T}{T_{\mathrm{c},ij}}\right) + \omega_{ij}\left(\frac{T}{T_{\mathrm{c},ij}}\right)
 \right]\]</div>
-<p>This is implemented in a simplified fashion usintg <a class="reference internal" href="#thermodynamic_properties.eos.virial.BinarySecondVirial.get_w_Tc_Pc" title="thermodynamic_properties.eos.virial.BinarySecondVirial.get_w_Tc_Pc"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BinarySecondVirial.get_w_Tc_Pc()</span></code></a>
+<p>This is implemented in a simplified fashion usintg <a class="reference internal" href="#scithermo.eos.virial.BinarySecondVirial.get_w_Tc_Pc" title="scithermo.eos.virial.BinarySecondVirial.get_w_Tc_Pc"><code class="xref py py-meth docutils literal notranslate"><span class="pre">BinarySecondVirial.get_w_Tc_Pc()</span></code></a>
 and then calling the generic expression for <span class="math notranslate nohighlight">\(B\)</span></p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -277,8 +277,8 @@ and then calling the generic expression for <span class="math notranslate nohigh
 </dd></dl>
 
 <dl class="py method">
-<dt id="thermodynamic_properties.eos.virial.BinarySecondVirial.B_mix_expr">
-<code class="sig-name descname">B_mix_expr</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">y_k</span></em>, <em class="sig-param"><span class="n">T</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/thermodynamic_properties/eos/virial.html#BinarySecondVirial.B_mix_expr"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#thermodynamic_properties.eos.virial.BinarySecondVirial.B_mix_expr" title="Permalink to this definition">¶</a></dt>
+<dt id="scithermo.eos.virial.BinarySecondVirial.B_mix_expr">
+<code class="sig-name descname">B_mix_expr</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">y_k</span></em>, <em class="sig-param"><span class="n">T</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/scithermo/eos/virial.html#BinarySecondVirial.B_mix_expr"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#scithermo.eos.virial.BinarySecondVirial.B_mix_expr" title="Permalink to this definition">¶</a></dt>
 <dd><dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -293,16 +293,45 @@ and then calling the generic expression for <span class="math notranslate nohigh
 </dd></dl>
 
 <dl class="py method">
-<dt id="thermodynamic_properties.eos.virial.BinarySecondVirial.bar_GiR_RT">
-<code class="sig-name descname">bar_GiR_RT</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">*</span><span class="n">args</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/thermodynamic_properties/eos/virial.html#BinarySecondVirial.bar_GiR_RT"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#thermodynamic_properties.eos.virial.BinarySecondVirial.bar_GiR_RT" title="Permalink to this definition">¶</a></dt>
+<dt id="scithermo.eos.virial.BinarySecondVirial.G_R_RT">
+<code class="sig-name descname">G_R_RT</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">*</span><span class="n">args</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/scithermo/eos/virial.html#BinarySecondVirial.G_R_RT"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#scithermo.eos.virial.BinarySecondVirial.G_R_RT" title="Permalink to this definition">¶</a></dt>
+<dd><p>Residual free energy of mixture <span class="math notranslate nohighlight">\(G^\mathrm{R}\)</span></p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="scithermo.eos.virial.BinarySecondVirial.H_R_RT">
+<code class="sig-name descname">H_R_RT</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">*</span><span class="n">args</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/scithermo/eos/virial.html#BinarySecondVirial.H_R_RT"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#scithermo.eos.virial.BinarySecondVirial.H_R_RT" title="Permalink to this definition">¶</a></dt>
+<dd><p>Residual enthalpy of mixture <span class="math notranslate nohighlight">\(H^\mathrm{R}\)</span></p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="scithermo.eos.virial.BinarySecondVirial.S_R_R">
+<code class="sig-name descname">S_R_R</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">*</span><span class="n">args</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/scithermo/eos/virial.html#BinarySecondVirial.S_R_R"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#scithermo.eos.virial.BinarySecondVirial.S_R_R" title="Permalink to this definition">¶</a></dt>
+<dd><p>Residual entropy of mixture <span class="math notranslate nohighlight">\(S^\mathrm{R}\)</span></p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="scithermo.eos.virial.BinarySecondVirial.X_R_dimensionless">
+<code class="sig-name descname">X_R_dimensionless</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">method</span><span class="p">:</span> <span class="n">callable</span></em>, <em class="sig-param"><span class="n">cas_i</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">y_i</span><span class="p">:</span> <span class="n">float</span></em>, <em class="sig-param"><span class="n">P</span><span class="p">:</span> <span class="n">float</span></em>, <em class="sig-param"><span class="n">T</span><span class="p">:</span> <span class="n">float</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/scithermo/eos/virial.html#BinarySecondVirial.X_R_dimensionless"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#scithermo.eos.virial.BinarySecondVirial.X_R_dimensionless" title="Permalink to this definition">¶</a></dt>
+<dd><p>Residual property of <span class="math notranslate nohighlight">\(X\)</span> for mixture.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>method</strong> (<em>callable</em>) – function to compute partial molar property of compound</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="scithermo.eos.virial.BinarySecondVirial.bar_GiR_RT">
+<code class="sig-name descname">bar_GiR_RT</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">*</span><span class="n">args</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/scithermo/eos/virial.html#BinarySecondVirial.bar_GiR_RT"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#scithermo.eos.virial.BinarySecondVirial.bar_GiR_RT" title="Permalink to this definition">¶</a></dt>
 <dd><p>Dimensionless residual partial molar free energy of component <span class="math notranslate nohighlight">\(c1\)</span></p>
 <div class="math notranslate nohighlight" id="equation-eq-gir">
 <span class="eqno">(1)<a class="headerlink" href="#equation-eq-gir" title="Permalink to this equation">¶</a></span>\[\frac{\bar{G}^\mathrm{R}_i}{RT} = \ln\hat{\phi}_i\]</div>
 </dd></dl>
 
 <dl class="py method">
-<dt id="thermodynamic_properties.eos.virial.BinarySecondVirial.bar_HiR_RT">
-<code class="sig-name descname">bar_HiR_RT</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">cas_i</span></em>, <em class="sig-param"><span class="n">y_i</span></em>, <em class="sig-param"><span class="n">P</span></em>, <em class="sig-param"><span class="n">T</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/thermodynamic_properties/eos/virial.html#BinarySecondVirial.bar_HiR_RT"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#thermodynamic_properties.eos.virial.BinarySecondVirial.bar_HiR_RT" title="Permalink to this definition">¶</a></dt>
+<dt id="scithermo.eos.virial.BinarySecondVirial.bar_HiR_RT">
+<code class="sig-name descname">bar_HiR_RT</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">cas_i</span></em>, <em class="sig-param"><span class="n">y_i</span></em>, <em class="sig-param"><span class="n">P</span></em>, <em class="sig-param"><span class="n">T</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/scithermo/eos/virial.html#BinarySecondVirial.bar_HiR_RT"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#scithermo.eos.virial.BinarySecondVirial.bar_HiR_RT" title="Permalink to this definition">¶</a></dt>
 <dd><p>Dimensionless residual partial molar enthalpy of component <span class="math notranslate nohighlight">\(c1\)</span></p>
 <div class="math notranslate nohighlight">
 \[\begin{split}\begin{align}
@@ -335,8 +364,8 @@ so that we obtain</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="thermodynamic_properties.eos.virial.BinarySecondVirial.bar_SiR_R">
-<code class="sig-name descname">bar_SiR_R</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">cas_i</span></em>, <em class="sig-param"><span class="n">y_i</span></em>, <em class="sig-param"><span class="n">P</span></em>, <em class="sig-param"><span class="n">T</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/thermodynamic_properties/eos/virial.html#BinarySecondVirial.bar_SiR_R"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#thermodynamic_properties.eos.virial.BinarySecondVirial.bar_SiR_R" title="Permalink to this definition">¶</a></dt>
+<dt id="scithermo.eos.virial.BinarySecondVirial.bar_SiR_R">
+<code class="sig-name descname">bar_SiR_R</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">cas_i</span></em>, <em class="sig-param"><span class="n">y_i</span></em>, <em class="sig-param"><span class="n">P</span></em>, <em class="sig-param"><span class="n">T</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/scithermo/eos/virial.html#BinarySecondVirial.bar_SiR_R"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#scithermo.eos.virial.BinarySecondVirial.bar_SiR_R" title="Permalink to this definition">¶</a></dt>
 <dd><p>Dimensionless residual partial molar entropy of component <span class="math notranslate nohighlight">\(c1\)</span></p>
 <p>Since</p>
 <div class="math notranslate nohighlight">
@@ -366,11 +395,18 @@ so that we obtain</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="thermodynamic_properties.eos.virial.BinarySecondVirial.bar_ViR_RT">
-<code class="sig-name descname">bar_ViR_RT</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">cas_i</span></em>, <em class="sig-param"><span class="n">y_i</span></em>, <em class="sig-param"><span class="n">P</span></em>, <em class="sig-param"><span class="n">T</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/thermodynamic_properties/eos/virial.html#BinarySecondVirial.bar_ViR_RT"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#thermodynamic_properties.eos.virial.BinarySecondVirial.bar_ViR_RT" title="Permalink to this definition">¶</a></dt>
+<dt id="scithermo.eos.virial.BinarySecondVirial.bar_ViR_RT">
+<code class="sig-name descname">bar_ViR_RT</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">cas_i</span></em>, <em class="sig-param"><span class="n">y_i</span></em>, <em class="sig-param"><span class="n">P</span></em>, <em class="sig-param"><span class="n">T</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/scithermo/eos/virial.html#BinarySecondVirial.bar_ViR_RT"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#scithermo.eos.virial.BinarySecondVirial.bar_ViR_RT" title="Permalink to this definition">¶</a></dt>
 <dd><p>residual Partial molar volume for component <em>i</em></p>
 <div class="math notranslate nohighlight">
-\[\frac{\bar{V}_i^\mathrm{R}}{RT} = \left(\frac{\partial \ln\hat{\phi}_i}{\partial P}\right)_{T,y}\]</div>
+\[\begin{split}\begin{align}
+    \frac{\bar{V}_i^\mathrm{R}}{RT} &amp;= \left(\frac{\partial \ln\hat{\phi}_i}{\partial P}\right)_{T,y}\\
+    &amp;= \frac{B_{ii} + (1-y_i)^2\delta_{ij}}{RT}
+\end{align}\end{split}\]</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This expression does not depend on <span class="math notranslate nohighlight">\(P\)</span></p>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -380,12 +416,15 @@ so that we obtain</p>
 <li><p><strong>T</strong> (<em>float</em>) – temperature in K</p></li>
 </ul>
 </dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><span class="math notranslate nohighlight">\(\bar{V}_i^\mathrm{R}/R/T\)</span></p>
+</dd>
 </dl>
 </dd></dl>
 
 <dl class="py method">
-<dt id="thermodynamic_properties.eos.virial.BinarySecondVirial.calc_Z">
-<code class="sig-name descname">calc_Z</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">y_k</span></em>, <em class="sig-param"><span class="n">P</span></em>, <em class="sig-param"><span class="n">T</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/thermodynamic_properties/eos/virial.html#BinarySecondVirial.calc_Z"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#thermodynamic_properties.eos.virial.BinarySecondVirial.calc_Z" title="Permalink to this definition">¶</a></dt>
+<dt id="scithermo.eos.virial.BinarySecondVirial.calc_Z">
+<code class="sig-name descname">calc_Z</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">y_k</span></em>, <em class="sig-param"><span class="n">P</span></em>, <em class="sig-param"><span class="n">T</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/scithermo/eos/virial.html#BinarySecondVirial.calc_Z"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#scithermo.eos.virial.BinarySecondVirial.calc_Z" title="Permalink to this definition">¶</a></dt>
 <dd><dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -401,8 +440,8 @@ so that we obtain</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="thermodynamic_properties.eos.virial.BinarySecondVirial.d_dij_d_Tr">
-<code class="sig-name descname">d_dij_d_Tr</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">T</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/thermodynamic_properties/eos/virial.html#BinarySecondVirial.d_dij_d_Tr"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#thermodynamic_properties.eos.virial.BinarySecondVirial.d_dij_d_Tr" title="Permalink to this definition">¶</a></dt>
+<dt id="scithermo.eos.virial.BinarySecondVirial.d_dij_d_Tr">
+<code class="sig-name descname">d_dij_d_Tr</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">T</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/scithermo/eos/virial.html#BinarySecondVirial.d_dij_d_Tr"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#scithermo.eos.virial.BinarySecondVirial.d_dij_d_Tr" title="Permalink to this definition">¶</a></dt>
 <dd><div class="math notranslate nohighlight" id="equation-eq-d-dij">
 <span class="eqno">(3)<a class="headerlink" href="#equation-eq-d-dij" title="Permalink to this equation">¶</a></span>\[\frac{\partial \delta_{ij}}{\partial T_r} = 2\frac{\partial B_{ij}}{\partial T_r}-\frac{\partial B_{ii}}{\partial T_r}-\frac{\partial B_{jj}}{\partial T_r}\]</div>
 <dl class="field-list simple">
@@ -413,8 +452,8 @@ so that we obtain</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="thermodynamic_properties.eos.virial.BinarySecondVirial.d_ij_expr">
-<code class="sig-name descname">d_ij_expr</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">T</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/thermodynamic_properties/eos/virial.html#BinarySecondVirial.d_ij_expr"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#thermodynamic_properties.eos.virial.BinarySecondVirial.d_ij_expr" title="Permalink to this definition">¶</a></dt>
+<dt id="scithermo.eos.virial.BinarySecondVirial.d_ij_expr">
+<code class="sig-name descname">d_ij_expr</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">T</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/scithermo/eos/virial.html#BinarySecondVirial.d_ij_expr"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#scithermo.eos.virial.BinarySecondVirial.d_ij_expr" title="Permalink to this definition">¶</a></dt>
 <dd><div class="math notranslate nohighlight" id="equation-eq-dij">
 <span class="eqno">(4)<a class="headerlink" href="#equation-eq-dij" title="Permalink to this equation">¶</a></span>\[\delta_{ij} = 2B_{ij} - B_{ii} - B_{jj}\]</div>
 <dl class="field-list simple">
@@ -428,8 +467,8 @@ so that we obtain</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="thermodynamic_properties.eos.virial.BinarySecondVirial.get_w_Tc_Pc">
-<code class="sig-name descname">get_w_Tc_Pc</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">cas_i</span></em>, <em class="sig-param"><span class="n">cas_j</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/thermodynamic_properties/eos/virial.html#BinarySecondVirial.get_w_Tc_Pc"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#thermodynamic_properties.eos.virial.BinarySecondVirial.get_w_Tc_Pc" title="Permalink to this definition">¶</a></dt>
+<dt id="scithermo.eos.virial.BinarySecondVirial.get_w_Tc_Pc">
+<code class="sig-name descname">get_w_Tc_Pc</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">cas_i</span></em>, <em class="sig-param"><span class="n">cas_j</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/scithermo/eos/virial.html#BinarySecondVirial.get_w_Tc_Pc"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#scithermo.eos.virial.BinarySecondVirial.get_w_Tc_Pc" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns critical constants for calculation based off of whetner c1 = c2 or not</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
@@ -442,8 +481,8 @@ so that we obtain</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="thermodynamic_properties.eos.virial.BinarySecondVirial.ln_hat_phi_i_expr">
-<code class="sig-name descname">ln_hat_phi_i_expr</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">cas_i</span></em>, <em class="sig-param"><span class="n">y_i</span></em>, <em class="sig-param"><span class="n">P</span></em>, <em class="sig-param"><span class="n">T</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/thermodynamic_properties/eos/virial.html#BinarySecondVirial.ln_hat_phi_i_expr"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#thermodynamic_properties.eos.virial.BinarySecondVirial.ln_hat_phi_i_expr" title="Permalink to this definition">¶</a></dt>
+<dt id="scithermo.eos.virial.BinarySecondVirial.ln_hat_phi_i_expr">
+<code class="sig-name descname">ln_hat_phi_i_expr</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">cas_i</span></em>, <em class="sig-param"><span class="n">y_i</span></em>, <em class="sig-param"><span class="n">P</span></em>, <em class="sig-param"><span class="n">T</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/scithermo/eos/virial.html#BinarySecondVirial.ln_hat_phi_i_expr"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#scithermo.eos.virial.BinarySecondVirial.ln_hat_phi_i_expr" title="Permalink to this definition">¶</a></dt>
 <dd><p>logarithm of fugacity coefficient</p>
 <div class="math notranslate nohighlight">
 \[\ln\hat{\phi}_i = \frac{P}{RT}\left[B_{ii} + (1-y_i)^2\delta_{ij}\right]\]</div>

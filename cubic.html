@@ -156,8 +156,8 @@
   <div class="section" id="cubic-equation-of-state">
 <h1><span class="section-number">4. </span>Cubic Equation of State<a class="headerlink" href="#cubic-equation-of-state" title="Permalink to this headline">¶</a></h1>
 <dl class="py class">
-<dt id="thermodynamic_properties.eos.cubic.Cubic">
-<em class="property">class </em><code class="sig-prename descclassname">thermodynamic_properties.eos.cubic.</code><code class="sig-name descname">Cubic</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">sigma</span><span class="p">:</span> <span class="n">float</span></em>, <em class="sig-param"><span class="n">epsilon</span><span class="p">:</span> <span class="n">float</span></em>, <em class="sig-param"><span class="n">Omega</span><span class="p">:</span> <span class="n">float</span></em>, <em class="sig-param"><span class="n">Psi</span><span class="p">:</span> <span class="n">float</span></em>, <em class="sig-param"><span class="n">dippr_no</span><span class="p">:</span> <span class="n">str</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">compound_name</span><span class="p">:</span> <span class="n">str</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cas_number</span><span class="p">:</span> <span class="n">str</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/thermodynamic_properties/eos/cubic.html#Cubic"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#thermodynamic_properties.eos.cubic.Cubic" title="Permalink to this definition">¶</a></dt>
+<dt id="scithermo.eos.cubic.Cubic">
+<em class="property">class </em><code class="sig-prename descclassname">scithermo.eos.cubic.</code><code class="sig-name descname">Cubic</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">sigma</span><span class="p">:</span> <span class="n">float</span></em>, <em class="sig-param"><span class="n">epsilon</span><span class="p">:</span> <span class="n">float</span></em>, <em class="sig-param"><span class="n">Omega</span><span class="p">:</span> <span class="n">float</span></em>, <em class="sig-param"><span class="n">Psi</span><span class="p">:</span> <span class="n">float</span></em>, <em class="sig-param"><span class="n">dippr_no</span><span class="p">:</span> <span class="n">str</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">compound_name</span><span class="p">:</span> <span class="n">str</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cas_number</span><span class="p">:</span> <span class="n">str</span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/scithermo/eos/cubic.html#Cubic"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#scithermo.eos.cubic.Cubic" title="Permalink to this definition">¶</a></dt>
 <dd><p>Generic Cubic Equation of State
 Defined as in <a class="bibtex reference internal" href="zreferences.html#perry" id="id1">[GP07]</a></p>
 <div class="math notranslate nohighlight">
@@ -177,8 +177,8 @@ Defined as in <a class="bibtex reference internal" href="zreferences.html#perry"
 </dd>
 </dl>
 <dl class="py method">
-<dt id="thermodynamic_properties.eos.cubic.Cubic.G_R_RT_expr">
-<code class="sig-name descname">G_R_RT_expr</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">P</span></em>, <em class="sig-param"><span class="n">V</span></em>, <em class="sig-param"><span class="n">T</span></em>, <em class="sig-param"><span class="n">log</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/thermodynamic_properties/eos/cubic.html#Cubic.G_R_RT_expr"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#thermodynamic_properties.eos.cubic.Cubic.G_R_RT_expr" title="Permalink to this definition">¶</a></dt>
+<dt id="scithermo.eos.cubic.Cubic.G_R_RT_expr">
+<code class="sig-name descname">G_R_RT_expr</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">P</span></em>, <em class="sig-param"><span class="n">V</span></em>, <em class="sig-param"><span class="n">T</span></em>, <em class="sig-param"><span class="n">log</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/scithermo/eos/cubic.html#Cubic.G_R_RT_expr"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#scithermo.eos.cubic.Cubic.G_R_RT_expr" title="Permalink to this definition">¶</a></dt>
 <dd><p>Dimensionless residual gibbs</p>
 <div class="math notranslate nohighlight">
 \[\frac{G^\mathrm{R}}{RT} = Z - 1 + \ln(Z-\beta) - qI\]</div>
@@ -190,8 +190,8 @@ Defined as in <a class="bibtex reference internal" href="zreferences.html#perry"
 </dd></dl>
 
 <dl class="py method">
-<dt id="thermodynamic_properties.eos.cubic.Cubic.H_R_RT_expr">
-<code class="sig-name descname">H_R_RT_expr</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">P</span></em>, <em class="sig-param"><span class="n">V</span></em>, <em class="sig-param"><span class="n">T</span></em>, <em class="sig-param"><span class="n">log</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/thermodynamic_properties/eos/cubic.html#Cubic.H_R_RT_expr"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#thermodynamic_properties.eos.cubic.Cubic.H_R_RT_expr" title="Permalink to this definition">¶</a></dt>
+<dt id="scithermo.eos.cubic.Cubic.H_R_RT_expr">
+<code class="sig-name descname">H_R_RT_expr</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">P</span></em>, <em class="sig-param"><span class="n">V</span></em>, <em class="sig-param"><span class="n">T</span></em>, <em class="sig-param"><span class="n">log</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/scithermo/eos/cubic.html#Cubic.H_R_RT_expr"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#scithermo.eos.cubic.Cubic.H_R_RT_expr" title="Permalink to this definition">¶</a></dt>
 <dd><p>Dimensionless residual enthalpy</p>
 <div class="math notranslate nohighlight">
 \[\frac{H^\mathrm{R}}{RT} = Z - 1 + \left[\frac{\mathrm{d} \ln \alpha(T_\mathrm{r})}{\mathrm{d} \ln T_\mathrm{r}} - 1\right]qI\]</div>
@@ -203,8 +203,8 @@ Defined as in <a class="bibtex reference internal" href="zreferences.html#perry"
 </dd></dl>
 
 <dl class="py method">
-<dt id="thermodynamic_properties.eos.cubic.Cubic.H_expr">
-<code class="sig-name descname">H_expr</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">P</span></em>, <em class="sig-param"><span class="n">V</span></em>, <em class="sig-param"><span class="n">T</span></em>, <em class="sig-param"><span class="n">T_ref</span></em>, <em class="sig-param"><span class="n">val_ref</span><span class="o">=</span><span class="default_value">0.0</span></em>, <em class="sig-param"><span class="n">log</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/thermodynamic_properties/eos/cubic.html#Cubic.H_expr"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#thermodynamic_properties.eos.cubic.Cubic.H_expr" title="Permalink to this definition">¶</a></dt>
+<dt id="scithermo.eos.cubic.Cubic.H_expr">
+<code class="sig-name descname">H_expr</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">P</span></em>, <em class="sig-param"><span class="n">V</span></em>, <em class="sig-param"><span class="n">T</span></em>, <em class="sig-param"><span class="n">T_ref</span></em>, <em class="sig-param"><span class="n">val_ref</span><span class="o">=</span><span class="default_value">0.0</span></em>, <em class="sig-param"><span class="n">log</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/scithermo/eos/cubic.html#Cubic.H_expr"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#scithermo.eos.cubic.Cubic.H_expr" title="Permalink to this definition">¶</a></dt>
 <dd><p>Expression for fluid enthalpy</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -224,8 +224,8 @@ Defined as in <a class="bibtex reference internal" href="zreferences.html#perry"
 </dd></dl>
 
 <dl class="py method">
-<dt id="thermodynamic_properties.eos.cubic.Cubic.I_expr">
-<code class="sig-name descname">I_expr</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">P</span></em>, <em class="sig-param"><span class="n">V</span></em>, <em class="sig-param"><span class="n">T</span></em>, <em class="sig-param"><span class="n">log</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/thermodynamic_properties/eos/cubic.html#Cubic.I_expr"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#thermodynamic_properties.eos.cubic.Cubic.I_expr" title="Permalink to this definition">¶</a></dt>
+<dt id="scithermo.eos.cubic.Cubic.I_expr">
+<code class="sig-name descname">I_expr</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">P</span></em>, <em class="sig-param"><span class="n">V</span></em>, <em class="sig-param"><span class="n">T</span></em>, <em class="sig-param"><span class="n">log</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/scithermo/eos/cubic.html#Cubic.I_expr"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#scithermo.eos.cubic.Cubic.I_expr" title="Permalink to this definition">¶</a></dt>
 <dd><div class="math notranslate nohighlight">
 \[I = \frac{1}{\sigma - \epsilon}\ln{\left(
     \frac{Z + \sigma \beta}{Z + \epsilon \beta}
@@ -238,8 +238,8 @@ Defined as in <a class="bibtex reference internal" href="zreferences.html#perry"
 </dd></dl>
 
 <dl class="py method">
-<dt id="thermodynamic_properties.eos.cubic.Cubic.S_R_R_expr">
-<code class="sig-name descname">S_R_R_expr</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">P</span></em>, <em class="sig-param"><span class="n">V</span></em>, <em class="sig-param"><span class="n">T</span></em>, <em class="sig-param"><span class="n">log</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/thermodynamic_properties/eos/cubic.html#Cubic.S_R_R_expr"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#thermodynamic_properties.eos.cubic.Cubic.S_R_R_expr" title="Permalink to this definition">¶</a></dt>
+<dt id="scithermo.eos.cubic.Cubic.S_R_R_expr">
+<code class="sig-name descname">S_R_R_expr</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">P</span></em>, <em class="sig-param"><span class="n">V</span></em>, <em class="sig-param"><span class="n">T</span></em>, <em class="sig-param"><span class="n">log</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/scithermo/eos/cubic.html#Cubic.S_R_R_expr"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#scithermo.eos.cubic.Cubic.S_R_R_expr" title="Permalink to this definition">¶</a></dt>
 <dd><p>Dimensionless residual entropy</p>
 <div class="math notranslate nohighlight">
 \[\frac{S^\mathrm{R}}{R} = \ln(Z-\beta) + \frac{\mathrm{d} \ln \alpha(T_\mathrm{r})}{\mathrm{d} \ln T_\mathrm{r}} qI\]</div>
@@ -251,16 +251,16 @@ Defined as in <a class="bibtex reference internal" href="zreferences.html#perry"
 </dd></dl>
 
 <dl class="py method">
-<dt id="thermodynamic_properties.eos.cubic.Cubic.Z_liquid_RHS">
-<code class="sig-name descname">Z_liquid_RHS</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">Z</span></em>, <em class="sig-param"><span class="n">beta</span></em>, <em class="sig-param"><span class="n">q</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/thermodynamic_properties/eos/cubic.html#Cubic.Z_liquid_RHS"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#thermodynamic_properties.eos.cubic.Cubic.Z_liquid_RHS" title="Permalink to this definition">¶</a></dt>
+<dt id="scithermo.eos.cubic.Cubic.Z_liquid_RHS">
+<code class="sig-name descname">Z_liquid_RHS</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">Z</span></em>, <em class="sig-param"><span class="n">beta</span></em>, <em class="sig-param"><span class="n">q</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/scithermo/eos/cubic.html#Cubic.Z_liquid_RHS"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#scithermo.eos.cubic.Cubic.Z_liquid_RHS" title="Permalink to this definition">¶</a></dt>
 <dd><p>Compressibility of vapor <a class="bibtex reference internal" href="zreferences.html#perry" id="id2">[GP07]</a></p>
 <div class="math notranslate nohighlight" id="equation-eq-cubic-res-liquid">
 <span class="eqno">(1)<a class="headerlink" href="#equation-eq-cubic-res-liquid" title="Permalink to this equation">¶</a></span>\[\beta + (Z + \epsilon\beta)(Z + \sigma\beta)\left(\frac{1 + \beta - Z}{q\beta}\right)\]</div>
 </dd></dl>
 
 <dl class="py method">
-<dt id="thermodynamic_properties.eos.cubic.Cubic.Z_vapor_RHS">
-<code class="sig-name descname">Z_vapor_RHS</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">Z</span></em>, <em class="sig-param"><span class="n">beta</span></em>, <em class="sig-param"><span class="n">q</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/thermodynamic_properties/eos/cubic.html#Cubic.Z_vapor_RHS"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#thermodynamic_properties.eos.cubic.Cubic.Z_vapor_RHS" title="Permalink to this definition">¶</a></dt>
+<dt id="scithermo.eos.cubic.Cubic.Z_vapor_RHS">
+<code class="sig-name descname">Z_vapor_RHS</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">Z</span></em>, <em class="sig-param"><span class="n">beta</span></em>, <em class="sig-param"><span class="n">q</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/scithermo/eos/cubic.html#Cubic.Z_vapor_RHS"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#scithermo.eos.cubic.Cubic.Z_vapor_RHS" title="Permalink to this definition">¶</a></dt>
 <dd><p>Compressibility of vapor <a class="bibtex reference internal" href="zreferences.html#perry" id="id3">[GP07]</a></p>
 <div class="math notranslate nohighlight" id="equation-eq-cubic-res-vapor">
 <span class="eqno">(2)<a class="headerlink" href="#equation-eq-cubic-res-vapor" title="Permalink to this equation">¶</a></span>\[1 + \beta - \frac{q\beta (Z - \beta)}{(Z + \epsilon\beta)(Z + \sigma\beta)}\]</div>
@@ -272,8 +272,8 @@ Defined as in <a class="bibtex reference internal" href="zreferences.html#perry"
 </dd></dl>
 
 <dl class="py method">
-<dt id="thermodynamic_properties.eos.cubic.Cubic.a_expr">
-<code class="sig-name descname">a_expr</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">T</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/thermodynamic_properties/eos/cubic.html#Cubic.a_expr"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#thermodynamic_properties.eos.cubic.Cubic.a_expr" title="Permalink to this definition">¶</a></dt>
+<dt id="scithermo.eos.cubic.Cubic.a_expr">
+<code class="sig-name descname">a_expr</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">T</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/scithermo/eos/cubic.html#Cubic.a_expr"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#scithermo.eos.cubic.Cubic.a_expr" title="Permalink to this definition">¶</a></dt>
 <dd><div class="math notranslate nohighlight">
 \[a(T) = \Psi \frac{\alpha(T_r)R^2T_{\mathrm{c}}^2}{P_{\mathrm{c}}}\]</div>
 <dl class="field-list simple">
@@ -284,8 +284,8 @@ Defined as in <a class="bibtex reference internal" href="zreferences.html#perry"
 </dd></dl>
 
 <dl class="py method">
-<dt id="thermodynamic_properties.eos.cubic.Cubic.alpha_expr">
-<code class="sig-name descname">alpha_expr</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">T_r</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/thermodynamic_properties/eos/cubic.html#Cubic.alpha_expr"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#thermodynamic_properties.eos.cubic.Cubic.alpha_expr" title="Permalink to this definition">¶</a></dt>
+<dt id="scithermo.eos.cubic.Cubic.alpha_expr">
+<code class="sig-name descname">alpha_expr</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">T_r</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/scithermo/eos/cubic.html#Cubic.alpha_expr"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#scithermo.eos.cubic.Cubic.alpha_expr" title="Permalink to this definition">¶</a></dt>
 <dd><p>An empirical expression, specific to a particular form of the equation of state</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -298,8 +298,8 @@ Defined as in <a class="bibtex reference internal" href="zreferences.html#perry"
 </dd></dl>
 
 <dl class="py method">
-<dt id="thermodynamic_properties.eos.cubic.Cubic.beta_expr">
-<code class="sig-name descname">beta_expr</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">T</span></em>, <em class="sig-param"><span class="n">P</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/thermodynamic_properties/eos/cubic.html#Cubic.beta_expr"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#thermodynamic_properties.eos.cubic.Cubic.beta_expr" title="Permalink to this definition">¶</a></dt>
+<dt id="scithermo.eos.cubic.Cubic.beta_expr">
+<code class="sig-name descname">beta_expr</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">T</span></em>, <em class="sig-param"><span class="n">P</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/scithermo/eos/cubic.html#Cubic.beta_expr"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#scithermo.eos.cubic.Cubic.beta_expr" title="Permalink to this definition">¶</a></dt>
 <dd><div class="math notranslate nohighlight">
 \[\beta = \Omega\frac{P_\mathrm{r}}{T_\mathrm{r}}\]</div>
 <dl class="field-list simple">
@@ -316,8 +316,8 @@ Defined as in <a class="bibtex reference internal" href="zreferences.html#perry"
 </dd></dl>
 
 <dl class="py method">
-<dt id="thermodynamic_properties.eos.cubic.Cubic.cardano_constants">
-<code class="sig-name descname">cardano_constants</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">T</span></em>, <em class="sig-param"><span class="n">P</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/thermodynamic_properties/eos/cubic.html#Cubic.cardano_constants"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#thermodynamic_properties.eos.cubic.Cubic.cardano_constants" title="Permalink to this definition">¶</a></dt>
+<dt id="scithermo.eos.cubic.Cubic.cardano_constants">
+<code class="sig-name descname">cardano_constants</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">T</span></em>, <em class="sig-param"><span class="n">P</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/scithermo/eos/cubic.html#Cubic.cardano_constants"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#scithermo.eos.cubic.Cubic.cardano_constants" title="Permalink to this definition">¶</a></dt>
 <dd><dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -335,14 +335,8 @@ Defined as in <a class="bibtex reference internal" href="zreferences.html#perry"
 </dd></dl>
 
 <dl class="py method">
-<dt id="thermodynamic_properties.eos.cubic.Cubic.check_roots">
-<code class="sig-name descname">check_roots</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">T_min</span></em>, <em class="sig-param"><span class="n">T_max</span></em>, <em class="sig-param"><span class="n">P_min</span></em>, <em class="sig-param"><span class="n">P_max</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/thermodynamic_properties/eos/cubic.html#Cubic.check_roots"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#thermodynamic_properties.eos.cubic.Cubic.check_roots" title="Permalink to this definition">¶</a></dt>
-<dd><p>Check to see if all conditions have one root</p>
-</dd></dl>
-
-<dl class="py method">
-<dt id="thermodynamic_properties.eos.cubic.Cubic.coefficients">
-<code class="sig-name descname">coefficients</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">T</span></em>, <em class="sig-param"><span class="n">P</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/thermodynamic_properties/eos/cubic.html#Cubic.coefficients"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#thermodynamic_properties.eos.cubic.Cubic.coefficients" title="Permalink to this definition">¶</a></dt>
+<dt id="scithermo.eos.cubic.Cubic.coefficients">
+<code class="sig-name descname">coefficients</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">T</span></em>, <em class="sig-param"><span class="n">P</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/scithermo/eos/cubic.html#Cubic.coefficients"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#scithermo.eos.cubic.Cubic.coefficients" title="Permalink to this definition">¶</a></dt>
 <dd><p>Polynomial oefficients for cubic equation of state</p>
 <div class="math notranslate nohighlight">
 \[Z^3 c_0 + Z^2c_1 + Z*c_2 + c_3 = 0\]</div>
@@ -354,8 +348,8 @@ Defined as in <a class="bibtex reference internal" href="zreferences.html#perry"
 </dd></dl>
 
 <dl class="py method">
-<dt id="thermodynamic_properties.eos.cubic.Cubic.d_ln_alpha_d_ln_Tr">
-<code class="sig-name descname">d_ln_alpha_d_ln_Tr</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">T_r</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/thermodynamic_properties/eos/cubic.html#Cubic.d_ln_alpha_d_ln_Tr"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#thermodynamic_properties.eos.cubic.Cubic.d_ln_alpha_d_ln_Tr" title="Permalink to this definition">¶</a></dt>
+<dt id="scithermo.eos.cubic.Cubic.d_ln_alpha_d_ln_Tr">
+<code class="sig-name descname">d_ln_alpha_d_ln_Tr</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">T_r</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/scithermo/eos/cubic.html#Cubic.d_ln_alpha_d_ln_Tr"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#scithermo.eos.cubic.Cubic.d_ln_alpha_d_ln_Tr" title="Permalink to this definition">¶</a></dt>
 <dd><dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>T_r</strong> – reduced temperature [dimensionless]</p>
@@ -367,8 +361,8 @@ Defined as in <a class="bibtex reference internal" href="zreferences.html#perry"
 </dd></dl>
 
 <dl class="py method">
-<dt id="thermodynamic_properties.eos.cubic.Cubic.iterate_to_solve_Z">
-<code class="sig-name descname">iterate_to_solve_Z</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">T</span></em>, <em class="sig-param"><span class="n">P</span></em>, <em class="sig-param"><span class="n">phase</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/thermodynamic_properties/eos/cubic.html#Cubic.iterate_to_solve_Z"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#thermodynamic_properties.eos.cubic.Cubic.iterate_to_solve_Z" title="Permalink to this definition">¶</a></dt>
+<dt id="scithermo.eos.cubic.Cubic.iterate_to_solve_Z">
+<code class="sig-name descname">iterate_to_solve_Z</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">T</span></em>, <em class="sig-param"><span class="n">P</span></em>, <em class="sig-param"><span class="n">phase</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/scithermo/eos/cubic.html#Cubic.iterate_to_solve_Z"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#scithermo.eos.cubic.Cubic.iterate_to_solve_Z" title="Permalink to this definition">¶</a></dt>
 <dd><dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -384,8 +378,8 @@ Defined as in <a class="bibtex reference internal" href="zreferences.html#perry"
 </dd></dl>
 
 <dl class="py method">
-<dt id="thermodynamic_properties.eos.cubic.Cubic.num_roots">
-<code class="sig-name descname">num_roots</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">T</span></em>, <em class="sig-param"><span class="n">P</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/thermodynamic_properties/eos/cubic.html#Cubic.num_roots"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#thermodynamic_properties.eos.cubic.Cubic.num_roots" title="Permalink to this definition">¶</a></dt>
+<dt id="scithermo.eos.cubic.Cubic.num_roots">
+<code class="sig-name descname">num_roots</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">T</span></em>, <em class="sig-param"><span class="n">P</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/scithermo/eos/cubic.html#Cubic.num_roots"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#scithermo.eos.cubic.Cubic.num_roots" title="Permalink to this definition">¶</a></dt>
 <dd><p>Find number of roots</p>
 <p>See <a class="bibtex reference internal" href="zreferences.html#loperena2012" id="id4">[ML12]</a><a class="bibtex reference internal" href="zreferences.html#deiters2002" id="id5">[Dei02]</a></p>
 <dl class="field-list simple">
@@ -402,8 +396,8 @@ Defined as in <a class="bibtex reference internal" href="zreferences.html#perry"
 </dd></dl>
 
 <dl class="py method">
-<dt id="thermodynamic_properties.eos.cubic.Cubic.plot_Z_vs_P">
-<code class="sig-name descname">plot_Z_vs_P</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">T</span></em>, <em class="sig-param"><span class="n">P_min</span></em>, <em class="sig-param"><span class="n">P_max</span></em>, <em class="sig-param"><span class="n">phase</span><span class="o">=</span><span class="default_value">'vapor'</span></em>, <em class="sig-param"><span class="n">symbol</span><span class="o">=</span><span class="default_value">'o'</span></em>, <em class="sig-param"><span class="n">ax</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/thermodynamic_properties/eos/cubic.html#Cubic.plot_Z_vs_P"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#thermodynamic_properties.eos.cubic.Cubic.plot_Z_vs_P" title="Permalink to this definition">¶</a></dt>
+<dt id="scithermo.eos.cubic.Cubic.plot_Z_vs_P">
+<code class="sig-name descname">plot_Z_vs_P</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">T</span></em>, <em class="sig-param"><span class="n">P_min</span></em>, <em class="sig-param"><span class="n">P_max</span></em>, <em class="sig-param"><span class="n">phase</span><span class="o">=</span><span class="default_value">'vapor'</span></em>, <em class="sig-param"><span class="n">symbol</span><span class="o">=</span><span class="default_value">'o'</span></em>, <em class="sig-param"><span class="n">ax</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/scithermo/eos/cubic.html#Cubic.plot_Z_vs_P"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#scithermo.eos.cubic.Cubic.plot_Z_vs_P" title="Permalink to this definition">¶</a></dt>
 <dd><p>Plot compressibility as a function of pressure</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -421,8 +415,14 @@ Defined as in <a class="bibtex reference internal" href="zreferences.html#perry"
 </dd></dl>
 
 <dl class="py method">
-<dt id="thermodynamic_properties.eos.cubic.Cubic.q_expr">
-<code class="sig-name descname">q_expr</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">T</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/thermodynamic_properties/eos/cubic.html#Cubic.q_expr"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#thermodynamic_properties.eos.cubic.Cubic.q_expr" title="Permalink to this definition">¶</a></dt>
+<dt id="scithermo.eos.cubic.Cubic.print_roots">
+<code class="sig-name descname">print_roots</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">T</span></em>, <em class="sig-param"><span class="n">P</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/scithermo/eos/cubic.html#Cubic.print_roots"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#scithermo.eos.cubic.Cubic.print_roots" title="Permalink to this definition">¶</a></dt>
+<dd><p>Check to see if all conditions have one root</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="scithermo.eos.cubic.Cubic.q_expr">
+<code class="sig-name descname">q_expr</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">T</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/scithermo/eos/cubic.html#Cubic.q_expr"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#scithermo.eos.cubic.Cubic.q_expr" title="Permalink to this definition">¶</a></dt>
 <dd><div class="math notranslate nohighlight">
 \[q = \frac{\Psi \alpha(T_\mathrm{r})}{\Omega T_\mathrm{r}}\]</div>
 <dl class="field-list simple">
@@ -433,8 +433,8 @@ Defined as in <a class="bibtex reference internal" href="zreferences.html#perry"
 </dd></dl>
 
 <dl class="py method">
-<dt id="thermodynamic_properties.eos.cubic.Cubic.residual">
-<code class="sig-name descname">residual</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">P</span></em>, <em class="sig-param"><span class="n">V</span></em>, <em class="sig-param"><span class="n">T</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/thermodynamic_properties/eos/cubic.html#Cubic.residual"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#thermodynamic_properties.eos.cubic.Cubic.residual" title="Permalink to this definition">¶</a></dt>
+<dt id="scithermo.eos.cubic.Cubic.residual">
+<code class="sig-name descname">residual</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">P</span></em>, <em class="sig-param"><span class="n">V</span></em>, <em class="sig-param"><span class="n">T</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/scithermo/eos/cubic.html#Cubic.residual"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#scithermo.eos.cubic.Cubic.residual" title="Permalink to this definition">¶</a></dt>
 <dd><dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -452,12 +452,12 @@ Defined as in <a class="bibtex reference internal" href="zreferences.html#perry"
 </dd></dl>
 
 <dl class="py class">
-<dt id="thermodynamic_properties.eos.cubic.RedlichKwong">
-<em class="property">class </em><code class="sig-prename descclassname">thermodynamic_properties.eos.cubic.</code><code class="sig-name descname">RedlichKwong</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/thermodynamic_properties/eos/cubic.html#RedlichKwong"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#thermodynamic_properties.eos.cubic.RedlichKwong" title="Permalink to this definition">¶</a></dt>
+<dt id="scithermo.eos.cubic.RedlichKwong">
+<em class="property">class </em><code class="sig-prename descclassname">scithermo.eos.cubic.</code><code class="sig-name descname">RedlichKwong</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/scithermo/eos/cubic.html#RedlichKwong"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#scithermo.eos.cubic.RedlichKwong" title="Permalink to this definition">¶</a></dt>
 <dd><p>Redlich-Kwong Equation of State <a class="bibtex reference internal" href="zreferences.html#rk" id="id6">[RK49]</a></p>
 <dl class="py method">
-<dt id="thermodynamic_properties.eos.cubic.RedlichKwong.alpha_expr">
-<code class="sig-name descname">alpha_expr</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">T_r</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/thermodynamic_properties/eos/cubic.html#RedlichKwong.alpha_expr"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#thermodynamic_properties.eos.cubic.RedlichKwong.alpha_expr" title="Permalink to this definition">¶</a></dt>
+<dt id="scithermo.eos.cubic.RedlichKwong.alpha_expr">
+<code class="sig-name descname">alpha_expr</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">T_r</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/scithermo/eos/cubic.html#RedlichKwong.alpha_expr"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#scithermo.eos.cubic.RedlichKwong.alpha_expr" title="Permalink to this definition">¶</a></dt>
 <dd><p>An empirical expression, specific to a particular form of the equation of state</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -470,8 +470,8 @@ Defined as in <a class="bibtex reference internal" href="zreferences.html#perry"
 </dd></dl>
 
 <dl class="py method">
-<dt id="thermodynamic_properties.eos.cubic.RedlichKwong.d_ln_alpha_d_ln_Tr">
-<code class="sig-name descname">d_ln_alpha_d_ln_Tr</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">T_r</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/thermodynamic_properties/eos/cubic.html#RedlichKwong.d_ln_alpha_d_ln_Tr"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#thermodynamic_properties.eos.cubic.RedlichKwong.d_ln_alpha_d_ln_Tr" title="Permalink to this definition">¶</a></dt>
+<dt id="scithermo.eos.cubic.RedlichKwong.d_ln_alpha_d_ln_Tr">
+<code class="sig-name descname">d_ln_alpha_d_ln_Tr</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">T_r</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/scithermo/eos/cubic.html#RedlichKwong.d_ln_alpha_d_ln_Tr"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#scithermo.eos.cubic.RedlichKwong.d_ln_alpha_d_ln_Tr" title="Permalink to this definition">¶</a></dt>
 <dd><dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>T_r</strong> – reduced temperature [dimensionless]</p>
@@ -485,8 +485,8 @@ Defined as in <a class="bibtex reference internal" href="zreferences.html#perry"
 </dd></dl>
 
 <dl class="py class">
-<dt id="thermodynamic_properties.eos.cubic.SoaveRedlichKwong">
-<em class="property">class </em><code class="sig-prename descclassname">thermodynamic_properties.eos.cubic.</code><code class="sig-name descname">SoaveRedlichKwong</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/thermodynamic_properties/eos/cubic.html#SoaveRedlichKwong"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#thermodynamic_properties.eos.cubic.SoaveRedlichKwong" title="Permalink to this definition">¶</a></dt>
+<dt id="scithermo.eos.cubic.SoaveRedlichKwong">
+<em class="property">class </em><code class="sig-prename descclassname">scithermo.eos.cubic.</code><code class="sig-name descname">SoaveRedlichKwong</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/scithermo/eos/cubic.html#SoaveRedlichKwong"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#scithermo.eos.cubic.SoaveRedlichKwong" title="Permalink to this definition">¶</a></dt>
 <dd><blockquote>
 <div><p>Soave Redlich-Kwong Equation of State <a class="bibtex reference internal" href="zreferences.html#srk" id="id7">[Soa72]</a></p>
 </div></blockquote>
@@ -496,8 +496,8 @@ Defined as in <a class="bibtex reference internal" href="zreferences.html#perry"
 </dd>
 </dl>
 <dl class="py method">
-<dt id="thermodynamic_properties.eos.cubic.SoaveRedlichKwong.alpha_expr">
-<code class="sig-name descname">alpha_expr</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">T_r</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/thermodynamic_properties/eos/cubic.html#SoaveRedlichKwong.alpha_expr"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#thermodynamic_properties.eos.cubic.SoaveRedlichKwong.alpha_expr" title="Permalink to this definition">¶</a></dt>
+<dt id="scithermo.eos.cubic.SoaveRedlichKwong.alpha_expr">
+<code class="sig-name descname">alpha_expr</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">T_r</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/scithermo/eos/cubic.html#SoaveRedlichKwong.alpha_expr"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#scithermo.eos.cubic.SoaveRedlichKwong.alpha_expr" title="Permalink to this definition">¶</a></dt>
 <dd><p>An empirical expression, specific to a particular form of the equation of state</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -510,8 +510,8 @@ Defined as in <a class="bibtex reference internal" href="zreferences.html#perry"
 </dd></dl>
 
 <dl class="py method">
-<dt id="thermodynamic_properties.eos.cubic.SoaveRedlichKwong.d_ln_alpha_d_ln_Tr">
-<code class="sig-name descname">d_ln_alpha_d_ln_Tr</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">T_r</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/thermodynamic_properties/eos/cubic.html#SoaveRedlichKwong.d_ln_alpha_d_ln_Tr"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#thermodynamic_properties.eos.cubic.SoaveRedlichKwong.d_ln_alpha_d_ln_Tr" title="Permalink to this definition">¶</a></dt>
+<dt id="scithermo.eos.cubic.SoaveRedlichKwong.d_ln_alpha_d_ln_Tr">
+<code class="sig-name descname">d_ln_alpha_d_ln_Tr</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">T_r</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/scithermo/eos/cubic.html#SoaveRedlichKwong.d_ln_alpha_d_ln_Tr"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#scithermo.eos.cubic.SoaveRedlichKwong.d_ln_alpha_d_ln_Tr" title="Permalink to this definition">¶</a></dt>
 <dd><dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>T_r</strong> – reduced temperature [dimensionless]</p>
@@ -525,8 +525,8 @@ Defined as in <a class="bibtex reference internal" href="zreferences.html#perry"
 </dd></dl>
 
 <dl class="py class">
-<dt id="thermodynamic_properties.eos.cubic.PengRobinson">
-<em class="property">class </em><code class="sig-prename descclassname">thermodynamic_properties.eos.cubic.</code><code class="sig-name descname">PengRobinson</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/thermodynamic_properties/eos/cubic.html#PengRobinson"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#thermodynamic_properties.eos.cubic.PengRobinson" title="Permalink to this definition">¶</a></dt>
+<dt id="scithermo.eos.cubic.PengRobinson">
+<em class="property">class </em><code class="sig-prename descclassname">scithermo.eos.cubic.</code><code class="sig-name descname">PengRobinson</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/scithermo/eos/cubic.html#PengRobinson"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#scithermo.eos.cubic.PengRobinson" title="Permalink to this definition">¶</a></dt>
 <dd><p>Peng-Robinson Equation of State <a class="bibtex reference internal" href="zreferences.html#peng-robinson" id="id8">[PR76]</a></p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>

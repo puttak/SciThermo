@@ -38,7 +38,7 @@
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="2. Critical Properties" href="critical_properties.html" />
-    <link rel="prev" title="Welcome to RealGasPSA’s documentation!" href="index.html" /> 
+    <link rel="prev" title="Welcome to SciThermo’s documentation!" href="index.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -153,11 +153,11 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="module-thermodynamic_properties.cp_ig">
-<span id="heat-capacity"></span><h1><span class="section-number">1. </span>Heat Capacity<a class="headerlink" href="#module-thermodynamic_properties.cp_ig" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="module-scithermo.cp_ig">
+<span id="heat-capacity"></span><h1><span class="section-number">1. </span>Heat Capacity<a class="headerlink" href="#module-scithermo.cp_ig" title="Permalink to this headline">¶</a></h1>
 <dl class="py class">
-<dt id="thermodynamic_properties.cp_ig.CpIdealGas">
-<em class="property">class </em><code class="sig-prename descclassname">thermodynamic_properties.cp_ig.</code><code class="sig-name descname">CpIdealGas</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">dippr_no</span><span class="p">:</span> <span class="n">str</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">compound_name</span><span class="p">:</span> <span class="n">str</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cas_number</span><span class="p">:</span> <span class="n">str</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">T_min_fit</span><span class="p">:</span> <span class="n">float</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">T_max_fit</span><span class="p">:</span> <span class="n">float</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">n_points_fit</span><span class="p">:</span> <span class="n">int</span> <span class="o">=</span> <span class="default_value">1000</span></em>, <em class="sig-param"><span class="n">poly_order</span><span class="p">:</span> <span class="n">int</span> <span class="o">=</span> <span class="default_value">2</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/thermodynamic_properties/cp_ig.html#CpIdealGas"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#thermodynamic_properties.cp_ig.CpIdealGas" title="Permalink to this definition">¶</a></dt>
+<dt id="scithermo.cp_ig.CpIdealGas">
+<em class="property">class </em><code class="sig-prename descclassname">scithermo.cp_ig.</code><code class="sig-name descname">CpIdealGas</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">dippr_no</span><span class="p">:</span> <span class="n">str</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">compound_name</span><span class="p">:</span> <span class="n">str</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cas_number</span><span class="p">:</span> <span class="n">str</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">T_min_fit</span><span class="p">:</span> <span class="n">float</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">T_max_fit</span><span class="p">:</span> <span class="n">float</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">n_points_fit</span><span class="p">:</span> <span class="n">int</span> <span class="o">=</span> <span class="default_value">1000</span></em>, <em class="sig-param"><span class="n">poly_order</span><span class="p">:</span> <span class="n">int</span> <span class="o">=</span> <span class="default_value">2</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/scithermo/cp_ig.html#CpIdealGas"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#scithermo.cp_ig.CpIdealGas" title="Permalink to this definition">¶</a></dt>
 <dd><p>Heat Capacity <span class="math notranslate nohighlight">\(C_{\mathrm{p}}^{\mathrm{IG}}\)</span> [J/mol/K] at Constant Pressure of Inorganic and Organic Compounds in the
 Ideal Gas State Fit to Hyperbolic Functions <a class="bibtex reference internal" href="zreferences.html#dippr" id="id1">[RWO+07]</a></p>
 <div class="math notranslate nohighlight" id="equation-cp-ig">
@@ -167,7 +167,7 @@ Ideal Gas State Fit to Hyperbolic Functions <a class="bibtex reference internal"
 Instead, the function is fit to a polynomial within a range of interest (<code class="xref py py-attr docutils literal notranslate"><span class="pre">T_min_fit</span></code>, <code class="xref py py-attr docutils literal notranslate"><span class="pre">T_max_fit</span></code>)
 Then, this polynomial is integrated symbolically using <span class="xref std std-ref">sympy</span> and lambdified into a function
 that can be called at runtime in an external computational environment by calling
-<a class="reference internal" href="#thermodynamic_properties.cp_ig.CpIdealGas.cp_ig_integral" title="thermodynamic_properties.cp_ig.CpIdealGas.cp_ig_integral"><code class="xref py py-meth docutils literal notranslate"><span class="pre">thermodynamic_properties.cp_ig.CpIdealGas.cp_ig_integral()</span></code></a> (see Equation <a class="reference internal" href="#equation-cp-int">(2)</a>)</p>
+<a class="reference internal" href="#scithermo.cp_ig.CpIdealGas.cp_ig_integral" title="scithermo.cp_ig.CpIdealGas.cp_ig_integral"><code class="xref py py-meth docutils literal notranslate"><span class="pre">scithermo.cp_ig.CpIdealGas.cp_ig_integral()</span></code></a> (see Equation <a class="reference internal" href="#equation-cp-int">(2)</a>)</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -187,8 +187,8 @@ that can be called at runtime in an external computational environment by callin
 </dd>
 </dl>
 <dl class="py method">
-<dt id="thermodynamic_properties.cp_ig.CpIdealGas.cp_ig_integral">
-<code class="sig-name descname">cp_ig_integral</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">T_a</span></em>, <em class="sig-param"><span class="n">T_b</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/thermodynamic_properties/cp_ig.html#CpIdealGas.cp_ig_integral"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#thermodynamic_properties.cp_ig.CpIdealGas.cp_ig_integral" title="Permalink to this definition">¶</a></dt>
+<dt id="scithermo.cp_ig.CpIdealGas.cp_ig_integral">
+<code class="sig-name descname">cp_ig_integral</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">T_a</span></em>, <em class="sig-param"><span class="n">T_b</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/scithermo/cp_ig.html#CpIdealGas.cp_ig_integral"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#scithermo.cp_ig.CpIdealGas.cp_ig_integral" title="Permalink to this definition">¶</a></dt>
 <dd><div class="math notranslate nohighlight" id="equation-cp-int">
 <span class="eqno">(2)<a class="headerlink" href="#equation-cp-int" title="Permalink to this equation">¶</a></span>\[\int_{T_a}^{T_b}C_{\mathrm{p}}^{\mathrm{IG}}(T^\star) \mathrm{d}T^\star\]</div>
 <dl class="field-list simple">
@@ -205,8 +205,8 @@ that can be called at runtime in an external computational environment by callin
 </dd></dl>
 
 <dl class="py method">
-<dt id="thermodynamic_properties.cp_ig.CpIdealGas.eval">
-<code class="sig-name descname">eval</code><span class="sig-paren">(</span><em class="sig-param">T</em>, <em class="sig-param">f_sinh=&lt;ufunc 'sinh'&gt;</em>, <em class="sig-param">f_cosh=&lt;ufunc 'cosh'&gt;</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/thermodynamic_properties/cp_ig.html#CpIdealGas.eval"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#thermodynamic_properties.cp_ig.CpIdealGas.eval" title="Permalink to this definition">¶</a></dt>
+<dt id="scithermo.cp_ig.CpIdealGas.eval">
+<code class="sig-name descname">eval</code><span class="sig-paren">(</span><em class="sig-param">T</em>, <em class="sig-param">f_sinh=&lt;ufunc 'sinh'&gt;</em>, <em class="sig-param">f_cosh=&lt;ufunc 'cosh'&gt;</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/scithermo/cp_ig.html#CpIdealGas.eval"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#scithermo.cp_ig.CpIdealGas.eval" title="Permalink to this definition">¶</a></dt>
 <dd><dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -222,14 +222,14 @@ that can be called at runtime in an external computational environment by callin
 </dd></dl>
 
 <dl class="py method">
-<dt id="thermodynamic_properties.cp_ig.CpIdealGas.get_numerical_percent_difference">
-<code class="sig-name descname">get_numerical_percent_difference</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/thermodynamic_properties/cp_ig.html#CpIdealGas.get_numerical_percent_difference"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#thermodynamic_properties.cp_ig.CpIdealGas.get_numerical_percent_difference" title="Permalink to this definition">¶</a></dt>
+<dt id="scithermo.cp_ig.CpIdealGas.get_numerical_percent_difference">
+<code class="sig-name descname">get_numerical_percent_difference</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/scithermo/cp_ig.html#CpIdealGas.get_numerical_percent_difference"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#scithermo.cp_ig.CpIdealGas.get_numerical_percent_difference" title="Permalink to this definition">¶</a></dt>
 <dd><p>Calculate the percent difference with numerical integration obtained by <span class="xref std std-ref">scipy</span></p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="thermodynamic_properties.cp_ig.CpIdealGas.numerical_integration">
-<code class="sig-name descname">numerical_integration</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">T_a</span></em>, <em class="sig-param"><span class="n">T_b</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/thermodynamic_properties/cp_ig.html#CpIdealGas.numerical_integration"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#thermodynamic_properties.cp_ig.CpIdealGas.numerical_integration" title="Permalink to this definition">¶</a></dt>
+<dt id="scithermo.cp_ig.CpIdealGas.numerical_integration">
+<code class="sig-name descname">numerical_integration</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">T_a</span></em>, <em class="sig-param"><span class="n">T_b</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/scithermo/cp_ig.html#CpIdealGas.numerical_integration"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#scithermo.cp_ig.CpIdealGas.numerical_integration" title="Permalink to this definition">¶</a></dt>
 <dd><p>Numerical integration using scipy</p>
 </dd></dl>
 
@@ -248,7 +248,7 @@ that can be called at runtime in an external computational environment by callin
         <a href="critical_properties.html" class="btn btn-neutral float-right" title="2. Critical Properties" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="index.html" class="btn btn-neutral float-left" title="Welcome to RealGasPSA’s documentation!" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="index.html" class="btn btn-neutral float-left" title="Welcome to SciThermo’s documentation!" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
