@@ -1,0 +1,589 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>4. Cubic Equation of State &mdash; SciThermo v0.0.1 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/language_data.js"></script>
+        <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/graphviz.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="5. References" href="zreferences.html" />
+    <link rel="prev" title="3. Virial Equation of State" href="virial.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> SciThermo
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="heat_capacity.html">1. Heat Capacity</a></li>
+<li class="toctree-l1"><a class="reference internal" href="critical_properties.html">2. Critical Properties</a></li>
+<li class="toctree-l1"><a class="reference internal" href="virial.html">3. Virial Equation of State</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">4. Cubic Equation of State</a></li>
+<li class="toctree-l1"><a class="reference internal" href="zreferences.html">5. References</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">SciThermo</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li><span class="section-number">4. </span>Cubic Equation of State</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/cubic.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="cubic-equation-of-state">
+<h1><span class="section-number">4. </span>Cubic Equation of State<a class="headerlink" href="#cubic-equation-of-state" title="Permalink to this headline">¶</a></h1>
+<dl class="py class">
+<dt id="thermodynamic_properties.eos.cubic.Cubic">
+<em class="property">class </em><code class="sig-prename descclassname">thermodynamic_properties.eos.cubic.</code><code class="sig-name descname">Cubic</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">sigma</span><span class="p">:</span> <span class="n">float</span></em>, <em class="sig-param"><span class="n">epsilon</span><span class="p">:</span> <span class="n">float</span></em>, <em class="sig-param"><span class="n">Omega</span><span class="p">:</span> <span class="n">float</span></em>, <em class="sig-param"><span class="n">Psi</span><span class="p">:</span> <span class="n">float</span></em>, <em class="sig-param"><span class="n">dippr_no</span><span class="p">:</span> <span class="n">str</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">compound_name</span><span class="p">:</span> <span class="n">str</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cas_number</span><span class="p">:</span> <span class="n">str</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/thermodynamic_properties/eos/cubic.html#Cubic"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#thermodynamic_properties.eos.cubic.Cubic" title="Permalink to this definition">¶</a></dt>
+<dd><p>Generic Cubic Equation of State
+Defined as in <a class="bibtex reference internal" href="zreferences.html#perry" id="id1">[GP07]</a></p>
+<div class="math notranslate nohighlight">
+\[P = \frac{RT}{V - b} - \frac{a(T)}{(V + \epsilon b)(V + \sigma b)}\]</div>
+<p>where <span class="math notranslate nohighlight">\(\epsilon\)</span> and <span class="math notranslate nohighlight">\(\sigma\)</span> are pure numbers–the same for all substances.
+<span class="math notranslate nohighlight">\(a(T)\)</span> and <span class="math notranslate nohighlight">\(b\)</span> are substance-dependent.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>R</strong> (<em>float</em><em>, </em><em>hard-coded</em>) – gas constant, set to SI units</p></li>
+<li><p><strong>sigma</strong> (<em>float</em>) – Parameter defined by specific equation of state, <span class="math notranslate nohighlight">\(\sigma\)</span></p></li>
+<li><p><strong>epsilon</strong> (<em>float</em>) – Parameter defined by specific equation of state, <span class="math notranslate nohighlight">\(\epsilon\)</span></p></li>
+<li><p><strong>Omega</strong> (<em>float</em>) – Parameter defined by specific equation of state, <span class="math notranslate nohighlight">\(\Omega\)</span></p></li>
+<li><p><strong>Psi</strong> (<em>float</em>) – Parameter defined by specific equation of state, <span class="math notranslate nohighlight">\(\Psi\)</span></p></li>
+<li><p><strong>tol</strong> (<em>float</em>) – tolerance for percent difference between compressilibity factor calculated iteratively, set to 0.01</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py method">
+<dt id="thermodynamic_properties.eos.cubic.Cubic.G_R_RT_expr">
+<code class="sig-name descname">G_R_RT_expr</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">P</span></em>, <em class="sig-param"><span class="n">V</span></em>, <em class="sig-param"><span class="n">T</span></em>, <em class="sig-param"><span class="n">log</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/thermodynamic_properties/eos/cubic.html#Cubic.G_R_RT_expr"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#thermodynamic_properties.eos.cubic.Cubic.G_R_RT_expr" title="Permalink to this definition">¶</a></dt>
+<dd><p>Dimensionless residual gibbs</p>
+<div class="math notranslate nohighlight">
+\[\frac{G^\mathrm{R}}{RT} = Z - 1 + \ln(Z-\beta) - qI\]</div>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>Expression for residual gibbs free (divided by RT) – dimensionless</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="thermodynamic_properties.eos.cubic.Cubic.H_R_RT_expr">
+<code class="sig-name descname">H_R_RT_expr</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">P</span></em>, <em class="sig-param"><span class="n">V</span></em>, <em class="sig-param"><span class="n">T</span></em>, <em class="sig-param"><span class="n">log</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/thermodynamic_properties/eos/cubic.html#Cubic.H_R_RT_expr"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#thermodynamic_properties.eos.cubic.Cubic.H_R_RT_expr" title="Permalink to this definition">¶</a></dt>
+<dd><p>Dimensionless residual enthalpy</p>
+<div class="math notranslate nohighlight">
+\[\frac{H^\mathrm{R}}{RT} = Z - 1 + \left[\frac{\mathrm{d} \ln \alpha(T_\mathrm{r})}{\mathrm{d} \ln T_\mathrm{r}} - 1\right]qI\]</div>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>Expression for residual enthalpy (divided by RT) – dimensionless</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="thermodynamic_properties.eos.cubic.Cubic.H_expr">
+<code class="sig-name descname">H_expr</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">P</span></em>, <em class="sig-param"><span class="n">V</span></em>, <em class="sig-param"><span class="n">T</span></em>, <em class="sig-param"><span class="n">T_ref</span></em>, <em class="sig-param"><span class="n">val_ref</span><span class="o">=</span><span class="default_value">0.0</span></em>, <em class="sig-param"><span class="n">log</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/thermodynamic_properties/eos/cubic.html#Cubic.H_expr"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#thermodynamic_properties.eos.cubic.Cubic.H_expr" title="Permalink to this definition">¶</a></dt>
+<dd><p>Expression for fluid enthalpy</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>P</strong> – pressure in Pa</p></li>
+<li><p><strong>V</strong> – molar volume [m**3/mol]</p></li>
+<li><p><strong>T</strong> – temperautre in K</p></li>
+<li><p><strong>T_ref</strong> – reference temperature in K</p></li>
+<li><p><strong>val_ref</strong> – value at reference temperature [J/mol/K]</p></li>
+<li><p><strong>log</strong> – function used for logarithm</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><span class="math notranslate nohighlight">\(H\)</span> [J/mol/K]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="thermodynamic_properties.eos.cubic.Cubic.I_expr">
+<code class="sig-name descname">I_expr</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">P</span></em>, <em class="sig-param"><span class="n">V</span></em>, <em class="sig-param"><span class="n">T</span></em>, <em class="sig-param"><span class="n">log</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/thermodynamic_properties/eos/cubic.html#Cubic.I_expr"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#thermodynamic_properties.eos.cubic.Cubic.I_expr" title="Permalink to this definition">¶</a></dt>
+<dd><div class="math notranslate nohighlight">
+\[I = \frac{1}{\sigma - \epsilon}\ln{\left(
+    \frac{Z + \sigma \beta}{Z + \epsilon \beta}
+\right)}\]</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>log</strong> (<em>callable</em><em>, </em><em>optional</em>) – function to be used for natural logarithm, defaults to <span class="xref std std-ref">np.log</span></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="thermodynamic_properties.eos.cubic.Cubic.S_R_R_expr">
+<code class="sig-name descname">S_R_R_expr</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">P</span></em>, <em class="sig-param"><span class="n">V</span></em>, <em class="sig-param"><span class="n">T</span></em>, <em class="sig-param"><span class="n">log</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/thermodynamic_properties/eos/cubic.html#Cubic.S_R_R_expr"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#thermodynamic_properties.eos.cubic.Cubic.S_R_R_expr" title="Permalink to this definition">¶</a></dt>
+<dd><p>Dimensionless residual entropy</p>
+<div class="math notranslate nohighlight">
+\[\frac{S^\mathrm{R}}{R} = \ln(Z-\beta) + \frac{\mathrm{d} \ln \alpha(T_\mathrm{r})}{\mathrm{d} \ln T_\mathrm{r}} qI\]</div>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>Expression for residual entropy (divided by R) – dimensionless</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="thermodynamic_properties.eos.cubic.Cubic.Z_liquid_RHS">
+<code class="sig-name descname">Z_liquid_RHS</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">Z</span></em>, <em class="sig-param"><span class="n">beta</span></em>, <em class="sig-param"><span class="n">q</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/thermodynamic_properties/eos/cubic.html#Cubic.Z_liquid_RHS"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#thermodynamic_properties.eos.cubic.Cubic.Z_liquid_RHS" title="Permalink to this definition">¶</a></dt>
+<dd><p>Compressibility of vapor <a class="bibtex reference internal" href="zreferences.html#perry" id="id2">[GP07]</a></p>
+<div class="math notranslate nohighlight" id="equation-eq-cubic-res-liquid">
+<span class="eqno">(1)<a class="headerlink" href="#equation-eq-cubic-res-liquid" title="Permalink to this equation">¶</a></span>\[\beta + (Z + \epsilon\beta)(Z + \sigma\beta)\left(\frac{1 + \beta - Z}{q\beta}\right)\]</div>
+</dd></dl>
+
+<dl class="py method">
+<dt id="thermodynamic_properties.eos.cubic.Cubic.Z_vapor_RHS">
+<code class="sig-name descname">Z_vapor_RHS</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">Z</span></em>, <em class="sig-param"><span class="n">beta</span></em>, <em class="sig-param"><span class="n">q</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/thermodynamic_properties/eos/cubic.html#Cubic.Z_vapor_RHS"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#thermodynamic_properties.eos.cubic.Cubic.Z_vapor_RHS" title="Permalink to this definition">¶</a></dt>
+<dd><p>Compressibility of vapor <a class="bibtex reference internal" href="zreferences.html#perry" id="id3">[GP07]</a></p>
+<div class="math notranslate nohighlight" id="equation-eq-cubic-res-vapor">
+<span class="eqno">(2)<a class="headerlink" href="#equation-eq-cubic-res-vapor" title="Permalink to this equation">¶</a></span>\[1 + \beta - \frac{q\beta (Z - \beta)}{(Z + \epsilon\beta)(Z + \sigma\beta)}\]</div>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="thermodynamic_properties.eos.cubic.Cubic.a_expr">
+<code class="sig-name descname">a_expr</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">T</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/thermodynamic_properties/eos/cubic.html#Cubic.a_expr"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#thermodynamic_properties.eos.cubic.Cubic.a_expr" title="Permalink to this definition">¶</a></dt>
+<dd><div class="math notranslate nohighlight">
+\[a(T) = \Psi \frac{\alpha(T_r)R^2T_{\mathrm{c}}^2}{P_{\mathrm{c}}}\]</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>T</strong> – temperautre in K</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="thermodynamic_properties.eos.cubic.Cubic.alpha_expr">
+<code class="sig-name descname">alpha_expr</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">T_r</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/thermodynamic_properties/eos/cubic.html#Cubic.alpha_expr"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#thermodynamic_properties.eos.cubic.Cubic.alpha_expr" title="Permalink to this definition">¶</a></dt>
+<dd><p>An empirical expression, specific to a particular form of the equation of state</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>T_r</strong> – reduced temperature (T/Tc), dimensionless</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><span class="math notranslate nohighlight">\(\alpha (T_r)\)</span></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="thermodynamic_properties.eos.cubic.Cubic.beta_expr">
+<code class="sig-name descname">beta_expr</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">T</span></em>, <em class="sig-param"><span class="n">P</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/thermodynamic_properties/eos/cubic.html#Cubic.beta_expr"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#thermodynamic_properties.eos.cubic.Cubic.beta_expr" title="Permalink to this definition">¶</a></dt>
+<dd><div class="math notranslate nohighlight">
+\[\beta = \Omega\frac{P_\mathrm{r}}{T_\mathrm{r}}\]</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>T</strong> – temperature in K</p></li>
+<li><p><strong>P</strong> – pressure in Pa</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><span class="math notranslate nohighlight">\(\beta\)</span></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="thermodynamic_properties.eos.cubic.Cubic.cardano_constants">
+<code class="sig-name descname">cardano_constants</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">T</span></em>, <em class="sig-param"><span class="n">P</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/thermodynamic_properties/eos/cubic.html#Cubic.cardano_constants"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#thermodynamic_properties.eos.cubic.Cubic.cardano_constants" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>T</strong> – temperature [T]</p></li>
+<li><p><strong>P</strong> – pressure [Pa]</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>cardano constants p, q</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>tuple</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="thermodynamic_properties.eos.cubic.Cubic.check_roots">
+<code class="sig-name descname">check_roots</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">T_min</span></em>, <em class="sig-param"><span class="n">T_max</span></em>, <em class="sig-param"><span class="n">P_min</span></em>, <em class="sig-param"><span class="n">P_max</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/thermodynamic_properties/eos/cubic.html#Cubic.check_roots"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#thermodynamic_properties.eos.cubic.Cubic.check_roots" title="Permalink to this definition">¶</a></dt>
+<dd><p>Check to see if all conditions have one root</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="thermodynamic_properties.eos.cubic.Cubic.coefficients">
+<code class="sig-name descname">coefficients</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">T</span></em>, <em class="sig-param"><span class="n">P</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/thermodynamic_properties/eos/cubic.html#Cubic.coefficients"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#thermodynamic_properties.eos.cubic.Cubic.coefficients" title="Permalink to this definition">¶</a></dt>
+<dd><p>Polynomial oefficients for cubic equation of state</p>
+<div class="math notranslate nohighlight">
+\[Z^3 c_0 + Z^2c_1 + Z*c_2 + c_3 = 0\]</div>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><code class="code docutils literal notranslate"><span class="pre">(c_0,</span> <span class="pre">c_1,</span> <span class="pre">c_2,</span> <span class="pre">c_3)</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="thermodynamic_properties.eos.cubic.Cubic.d_ln_alpha_d_ln_Tr">
+<code class="sig-name descname">d_ln_alpha_d_ln_Tr</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">T_r</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/thermodynamic_properties/eos/cubic.html#Cubic.d_ln_alpha_d_ln_Tr"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#thermodynamic_properties.eos.cubic.Cubic.d_ln_alpha_d_ln_Tr" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>T_r</strong> – reduced temperature [dimensionless]</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Expression for <span class="math notranslate nohighlight">\(\frac{\mathrm{d} \ln \alpha(T_\mathrm{r})}{\mathrm{d} \ln T_\mathrm{r}}\)</span></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="thermodynamic_properties.eos.cubic.Cubic.iterate_to_solve_Z">
+<code class="sig-name descname">iterate_to_solve_Z</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">T</span></em>, <em class="sig-param"><span class="n">P</span></em>, <em class="sig-param"><span class="n">phase</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/thermodynamic_properties/eos/cubic.html#Cubic.iterate_to_solve_Z"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#thermodynamic_properties.eos.cubic.Cubic.iterate_to_solve_Z" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>T</strong> – temperature in K</p></li>
+<li><p><strong>P</strong> – pressure in Pa</p></li>
+<li><p><strong>phase</strong> (<em>str</em>) – phase [vapor or liquid]</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>compressibility factor</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="thermodynamic_properties.eos.cubic.Cubic.num_roots">
+<code class="sig-name descname">num_roots</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">T</span></em>, <em class="sig-param"><span class="n">P</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/thermodynamic_properties/eos/cubic.html#Cubic.num_roots"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#thermodynamic_properties.eos.cubic.Cubic.num_roots" title="Permalink to this definition">¶</a></dt>
+<dd><p>Find number of roots</p>
+<p>See <a class="bibtex reference internal" href="zreferences.html#loperena2012" id="id4">[ML12]</a><a class="bibtex reference internal" href="zreferences.html#deiters2002" id="id5">[Dei02]</a></p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>T</strong> – temperature in K</p></li>
+<li><p><strong>P</strong> – pressure in Pa</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>number of roots</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="thermodynamic_properties.eos.cubic.Cubic.plot_Z_vs_P">
+<code class="sig-name descname">plot_Z_vs_P</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">T</span></em>, <em class="sig-param"><span class="n">P_min</span></em>, <em class="sig-param"><span class="n">P_max</span></em>, <em class="sig-param"><span class="n">phase</span><span class="o">=</span><span class="default_value">'vapor'</span></em>, <em class="sig-param"><span class="n">symbol</span><span class="o">=</span><span class="default_value">'o'</span></em>, <em class="sig-param"><span class="n">ax</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/thermodynamic_properties/eos/cubic.html#Cubic.plot_Z_vs_P"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#thermodynamic_properties.eos.cubic.Cubic.plot_Z_vs_P" title="Permalink to this definition">¶</a></dt>
+<dd><p>Plot compressibility as a function of pressure</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>T</strong> (<em>float</em>) – temperature [K]</p></li>
+<li><p><strong>P_min</strong> (<em>float</em>) – minimum pressure for plotting [Pa]</p></li>
+<li><p><strong>P_max</strong> (<em>float</em>) – maximum pressure for plotting [Pa]</p></li>
+<li><p><strong>phase</strong> (<em>str</em>) – phase type (liquid or vapor), defaults to vapor</p></li>
+<li><p><strong>symbol</strong> (<em>str</em>) – marker symbol, defaults to ‘o’</p></li>
+<li><p><strong>ax</strong> (<em>plt.axis</em>) – matplotlib axes for plotting, defaults to None</p></li>
+<li><p><strong>kwargs</strong> – keyword arguments for plotting</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="thermodynamic_properties.eos.cubic.Cubic.q_expr">
+<code class="sig-name descname">q_expr</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">T</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/thermodynamic_properties/eos/cubic.html#Cubic.q_expr"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#thermodynamic_properties.eos.cubic.Cubic.q_expr" title="Permalink to this definition">¶</a></dt>
+<dd><div class="math notranslate nohighlight">
+\[q = \frac{\Psi \alpha(T_\mathrm{r})}{\Omega T_\mathrm{r}}\]</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>T</strong> – temperautre in K</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="thermodynamic_properties.eos.cubic.Cubic.residual">
+<code class="sig-name descname">residual</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">P</span></em>, <em class="sig-param"><span class="n">V</span></em>, <em class="sig-param"><span class="n">T</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/thermodynamic_properties/eos/cubic.html#Cubic.residual"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#thermodynamic_properties.eos.cubic.Cubic.residual" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>P</strong> – pressure in Pa</p></li>
+<li><p><strong>V</strong> – volume in [mol/m**3]</p></li>
+<li><p><strong>T</strong> – temperature in K</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>residual for cubic equation of state</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="thermodynamic_properties.eos.cubic.RedlichKwong">
+<em class="property">class </em><code class="sig-prename descclassname">thermodynamic_properties.eos.cubic.</code><code class="sig-name descname">RedlichKwong</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/thermodynamic_properties/eos/cubic.html#RedlichKwong"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#thermodynamic_properties.eos.cubic.RedlichKwong" title="Permalink to this definition">¶</a></dt>
+<dd><p>Redlich-Kwong Equation of State <a class="bibtex reference internal" href="zreferences.html#rk" id="id6">[RK49]</a></p>
+<dl class="py method">
+<dt id="thermodynamic_properties.eos.cubic.RedlichKwong.alpha_expr">
+<code class="sig-name descname">alpha_expr</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">T_r</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/thermodynamic_properties/eos/cubic.html#RedlichKwong.alpha_expr"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#thermodynamic_properties.eos.cubic.RedlichKwong.alpha_expr" title="Permalink to this definition">¶</a></dt>
+<dd><p>An empirical expression, specific to a particular form of the equation of state</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>T_r</strong> – reduced temperature (T/Tc), dimensionless</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><span class="math notranslate nohighlight">\(\alpha (T_r)\)</span></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="thermodynamic_properties.eos.cubic.RedlichKwong.d_ln_alpha_d_ln_Tr">
+<code class="sig-name descname">d_ln_alpha_d_ln_Tr</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">T_r</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/thermodynamic_properties/eos/cubic.html#RedlichKwong.d_ln_alpha_d_ln_Tr"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#thermodynamic_properties.eos.cubic.RedlichKwong.d_ln_alpha_d_ln_Tr" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>T_r</strong> – reduced temperature [dimensionless]</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Expression for <span class="math notranslate nohighlight">\(\frac{\mathrm{d} \ln \alpha(T_\mathrm{r})}{\mathrm{d} \ln T_\mathrm{r}}\)</span></p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="thermodynamic_properties.eos.cubic.SoaveRedlichKwong">
+<em class="property">class </em><code class="sig-prename descclassname">thermodynamic_properties.eos.cubic.</code><code class="sig-name descname">SoaveRedlichKwong</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/thermodynamic_properties/eos/cubic.html#SoaveRedlichKwong"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#thermodynamic_properties.eos.cubic.SoaveRedlichKwong" title="Permalink to this definition">¶</a></dt>
+<dd><blockquote>
+<div><p>Soave Redlich-Kwong Equation of State <a class="bibtex reference internal" href="zreferences.html#srk" id="id7">[Soa72]</a></p>
+</div></blockquote>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>f_w</strong> (<em>float</em><em>, </em><em>derived</em>) – empirical expression used in <span class="math notranslate nohighlight">\(\alpha\)</span> [dimensionless?]</p>
+</dd>
+</dl>
+<dl class="py method">
+<dt id="thermodynamic_properties.eos.cubic.SoaveRedlichKwong.alpha_expr">
+<code class="sig-name descname">alpha_expr</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">T_r</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/thermodynamic_properties/eos/cubic.html#SoaveRedlichKwong.alpha_expr"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#thermodynamic_properties.eos.cubic.SoaveRedlichKwong.alpha_expr" title="Permalink to this definition">¶</a></dt>
+<dd><p>An empirical expression, specific to a particular form of the equation of state</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>T_r</strong> – reduced temperature (T/Tc), dimensionless</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><span class="math notranslate nohighlight">\(\alpha (T_r)\)</span></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="thermodynamic_properties.eos.cubic.SoaveRedlichKwong.d_ln_alpha_d_ln_Tr">
+<code class="sig-name descname">d_ln_alpha_d_ln_Tr</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">T_r</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/thermodynamic_properties/eos/cubic.html#SoaveRedlichKwong.d_ln_alpha_d_ln_Tr"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#thermodynamic_properties.eos.cubic.SoaveRedlichKwong.d_ln_alpha_d_ln_Tr" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>T_r</strong> – reduced temperature [dimensionless]</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Expression for <span class="math notranslate nohighlight">\(\frac{\mathrm{d} \ln \alpha(T_\mathrm{r})}{\mathrm{d} \ln T_\mathrm{r}}\)</span></p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="thermodynamic_properties.eos.cubic.PengRobinson">
+<em class="property">class </em><code class="sig-prename descclassname">thermodynamic_properties.eos.cubic.</code><code class="sig-name descname">PengRobinson</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/thermodynamic_properties/eos/cubic.html#PengRobinson"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#thermodynamic_properties.eos.cubic.PengRobinson" title="Permalink to this definition">¶</a></dt>
+<dd><p>Peng-Robinson Equation of State <a class="bibtex reference internal" href="zreferences.html#peng-robinson" id="id8">[PR76]</a></p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>f_w</strong> (<em>float</em><em>, </em><em>derived</em>) – empirical expression used in <span class="math notranslate nohighlight">\(\alpha\)</span> [dimensionless?]</p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="zreferences.html" class="btn btn-neutral float-right" title="5. References" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="virial.html" class="btn btn-neutral float-left" title="3. Virial Equation of State" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, Robert F. DeJaco
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

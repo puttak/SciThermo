@@ -1,0 +1,42 @@
+Heat Capacity
+=============
+
+
+.. automodule:: thermodynamic_properties.cp_ig
+
+.. autoclass:: thermodynamic_properties.cp_ig.CpIdealGas
+    :members:
+
+Critical Properties
+===================
+
+.. automodule:: thermodynamic_properties.critical_constants
+   :members:
+
+.. autoclass:: thermodynamic_properties.critical_constants.CriticalConstants
+    :members:
+
+
+Virial Equation of State
+========================
+
+.. autoclass:: thermodynamic_properties.eos.virial.SecondVirial
+    :members:
+
+.. autoclass:: thermodynamic_properties.eos.virial.BinarySecondVirial
+    :members:
+
+Cubic Equation of State
+=======================
+
+.. autoclass:: thermodynamic_properties.eos.cubic.Cubic
+    :members:
+
+.. autoclass:: thermodynamic_properties.eos.cubic.RedlichKwong
+    :members:
+
+.. autoclass:: thermodynamic_properties.eos.cubic.SoaveRedlichKwong
+    :members:
+
+.. autoclass:: thermodynamic_properties.eos.cubic.PengRobinson
+    :members:
